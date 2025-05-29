@@ -39,7 +39,8 @@ namespace vinay_angular_dotnetcore_ai.Server.Controllers
             if (file == null || file.Length == 0)
                 return BadRequest("No file uploaded.");
 
-            var uploadsPath = Path.Combine(_env.ContentRootPath, "uploads", "images");
+            var folderName = GetFolderName(file);
+            var uploadsPath = Path.Combine(_env.ContentRootPath, "uploads", folderName);
             Directory.CreateDirectory(uploadsPath); // Ensure the directory exists
 
             var fileNameOnly = Path.GetFileNameWithoutExtension(file.FileName);
@@ -52,6 +53,16 @@ namespace vinay_angular_dotnetcore_ai.Server.Controllers
             }
 
             return Ok(new { message = "Audio uploaded successfully", fileName = file.FileName });
+        }
+
+        private static string GetFolderName(IFormFile file)
+        {
+            string folderName;
+            if (((FormFile)file).ContentType.Contains("image", StringComparison.OrdinalIgnoreCase))
+                folderName = "images";
+            else
+                folderName = "audio";
+            return folderName;
         }
     }
 }

@@ -1,2 +1,4 @@
 /.vs
 vinay-angular-dotnetcore-ai.Server/uploads/**
+vinay-angular-dotnetcore-ai.Server/bin/**
+vinay-angular-dotnetcore-ai.Server/obj/**
