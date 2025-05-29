@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\vinay-angular-dotnetcore-ai.Server.props" />
+</Project>

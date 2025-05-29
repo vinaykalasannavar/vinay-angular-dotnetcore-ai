@@ -1,0 +1,1 @@
+C:\Vinay\Dev\github\vinay-angular-dotnetcore-ai\vinay-angular-dotnetcore-ai.client\obj\Debug\vinay-angular-dotnetcore-ai.client.esproj.CoreCompileInputs.cache

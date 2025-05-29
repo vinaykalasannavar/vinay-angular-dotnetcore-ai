@@ -1,0 +1,6 @@
+@vinay_angular_dotnetcore_ai.Server_HostAddress = http://localhost:5161
+
+GET {{vinay_angular_dotnetcore_ai.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

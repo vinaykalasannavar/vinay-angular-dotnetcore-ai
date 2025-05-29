@@ -1,0 +1,25 @@
+<p>ai-speaker works!</p>
+<!-- <div class="ai-character">
+  <img
+    [class.speaking]="isSpeaking"
+    src="assets/ai-character.png"
+    alt="AI Character"
+  />
+  <div class="speech-text" *ngIf="isSpeaking">
+    {{ textToSpeak }}
+  </div>
+</div> -->
+
+<ng-lottie  [options]="options"  (animationCreated)="handleAnimation($event)"  style="width: 200px; height: 200px"></ng-lottie>
+
+<div class="speech-text" >
+  {{ textToSpeak }}
+</div>
+
+<div>
+  <input [(ngModel)]="textToSpeak" placeholder="Type text to speak here..." />
+  <button (click)="updateText()">Update Text</button>
+</div>
+
+
+

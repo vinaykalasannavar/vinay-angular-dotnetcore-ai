@@ -1,0 +1,23 @@
+.vinays-webcam-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+video, canvas {
+  width: 100%;
+  max-width: 640px;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+}
