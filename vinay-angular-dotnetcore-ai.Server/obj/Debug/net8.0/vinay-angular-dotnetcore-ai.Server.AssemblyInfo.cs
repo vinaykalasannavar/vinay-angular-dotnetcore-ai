@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vinay-angular-dotnetcore-ai.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7746261e2fb6cbee5298660bd1236ddd1d65bb4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("vinay-angular-dotnetcore-ai.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vinay-angular-dotnetcore-ai.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

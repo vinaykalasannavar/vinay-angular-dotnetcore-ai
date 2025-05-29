@@ -4,5 +4,9 @@
 </div>
 
 <div class="controls">
+
+  <button (click)="startVoiceRecording()" [disabled]="isRecording">Start Recording</button>
+  <button (click)="stopVoiceRecording()" [disabled]="!isRecording">Stop Recording</button>
+
   <button (click)="captureScreenshot()">Capture Screenshot</button>
 </div>
