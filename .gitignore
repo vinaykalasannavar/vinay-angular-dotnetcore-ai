@@ -1,4 +1,14 @@
 /.vs
+vinay-angular-dotnetcore-ai.client/uploads/**
+vinay-angular-dotnetcore-ai.client/bin/**
+vinay-angular-dotnetcore-ai.client/obj/**
 vinay-angular-dotnetcore-ai.Server/uploads/**
 vinay-angular-dotnetcore-ai.Server/bin/**
 vinay-angular-dotnetcore-ai.Server/obj/**
+vinay-console-speech-to-text/obj/**
+vinay-console-text-to-speech/obj/**
+/node_modules
+/vinay-angular-dotnetcore-ai.client/vinay-angular-dotnetcore-ai.client.esproj.user
+/vinay-console-speech-to-text/bin/**
+/vinay-console-text-to-speech/bin/**
+*.user

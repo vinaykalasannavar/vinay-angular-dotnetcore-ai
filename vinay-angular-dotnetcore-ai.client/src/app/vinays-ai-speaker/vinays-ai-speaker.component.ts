@@ -16,7 +16,7 @@ export class AiSpeakerComponent implements OnChanges {
   isSpeaking: boolean = false;
 
   options: AnimationOptions = {
-    path: '/assets/lottie/chatting-robot.json',
+    path: '',
     loop: true,
     autoplay: false
   };

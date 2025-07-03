@@ -12,6 +12,7 @@ import { VinaysWebCameraComponent } from './vinays-web-camera/vinays-web-camera.
 import { AiSpeakerComponent } from './vinays-ai-speaker/vinays-ai-speaker.component';
 import player from 'lottie-web';
 import { LottieComponent, provideLottieOptions } from 'ngx-lottie';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LottieComponent, provideLottieOptions } from 'ngx-lottie';
     AppRoutingModule,
     AiSpeakerComponent,
     HttpClientModule,
-    LottieComponent
+    LottieComponent,
+    FormsModule
   ],
   providers: [
     provideLottieOptions({ player: () => import('lottie-web') }),

@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vinay-angular-dotnetcore-ai.Server", "vinay-angular-dotnetcore-ai.Server\vinay-angular-dotnetcore-ai.Server.csproj", "{C19686DC-D2D9-43C4-BF89-26481051F5E0}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "vinay-angular-dotnetcore-ai.client", "vinay-angular-dotnetcore-ai.client\vinay-angular-dotnetcore-ai.client.esproj", "{D3BEA8DF-F970-476A-BF58-44A24DDCD5AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vinay-text-to-speech", "vinay-text-to-speech", "{80D773A3-064B-40E3-B178-DD3F8F5F2FBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vinay-console-text-to-speech", "vinay-console-text-to-speech\vinay-console-text-to-speech.csproj", "{8FB8186E-F484-4240-836E-FE7E08BF3846}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vinay-console-speech-to-text", "vinay-console-speech-to-text\vinay-console-speech-to-text.csproj", "{9B801FB2-0507-4C4F-B298-C9597C089A42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,8 +29,20 @@ Global
 		{D3BEA8DF-F970-476A-BF58-44A24DDCD5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3BEA8DF-F970-476A-BF58-44A24DDCD5AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D3BEA8DF-F970-476A-BF58-44A24DDCD5AD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8FB8186E-F484-4240-836E-FE7E08BF3846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB8186E-F484-4240-836E-FE7E08BF3846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB8186E-F484-4240-836E-FE7E08BF3846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB8186E-F484-4240-836E-FE7E08BF3846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B801FB2-0507-4C4F-B298-C9597C089A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B801FB2-0507-4C4F-B298-C9597C089A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B801FB2-0507-4C4F-B298-C9597C089A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B801FB2-0507-4C4F-B298-C9597C089A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8FB8186E-F484-4240-836E-FE7E08BF3846} = {80D773A3-064B-40E3-B178-DD3F8F5F2FBB}
+		{9B801FB2-0507-4C4F-B298-C9597C089A42} = {80D773A3-064B-40E3-B178-DD3F8F5F2FBB}
 	EndGlobalSection
 EndGlobal

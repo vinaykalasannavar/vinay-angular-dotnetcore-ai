@@ -1,13 +1,65 @@
 .vinays-webcam-container {
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  float: left;
+  width: 30%;
+  /* height: 400px; */
+  /* padding: 10px 10px 10px 10px; */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.video-canvas-container {
+  /* justify-content: center; */
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  
+}
+.video-element {
+  border: 2px solid green;
+  display: block;
 }
 
-video, canvas {
+.canvas-element{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px dashed #92cd87;
+  border-radius: 8px;
+  pointer-events: none; /* optional: let clicks pass through to the video */
+}
+
+.screen-capture-container {
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 30%;
+  /* height: 400px; */
+  /* padding: 10px 10px 10px 10px; */
+  /* padding-left: 1%;
+  padding-right: 1%; */
+  margin-left: 1%;
+  margin-right: 1%;
+  float: left;
+  /* height: 400px; */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.conversation-container {
+  margin-top: 0px;
+  /* max-height: 300px; */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0px;
+  float: left;
+  width: 30%;
+}
+
+video,
+canvas {
   width: 100%;
-  max-width: 640px;
+  width: 90%;
   border: 2px solid #333;
   border-radius: 8px;
 }
@@ -20,4 +72,13 @@ video, canvas {
 button {
   padding: 8px 16px;
   font-size: 16px;
+}
+.section-header {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  height: 100px;
 }

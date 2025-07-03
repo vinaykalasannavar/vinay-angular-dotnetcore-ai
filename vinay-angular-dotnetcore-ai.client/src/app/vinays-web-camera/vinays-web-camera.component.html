@@ -1,12 +1,73 @@
-<div class="vinays-webcam-container">
-  <video #videoElement autoplay playsinline></video>
-  <canvas #canvas style="display:block;"></canvas>
-</div>
+<div>
+  <div class="vinays-webcam-container">
+    <div>
+      <div class="section-header">
+        <h3 style="margin-top: 0;">Webcam</h3>
+        <button *ngIf="!isDetecting" (click)="detectExpression()">
+          Look at my video
+        </button>
+        <button *ngIf="isDetecting" (click)="stopDetection()">
+          Stop looking at my video
+        </button>
+      </div>
 
-<div class="controls">
+      <div class="video-canvas-container">
+        <video class="video-element" #videoElement autoplay playsinline></video>
+        <canvas class="canvas-element" #canvasFaceDetection></canvas>
+      </div>
+      <div class="output" style="border: 1px dashed gray">
+        <div><h3>Your video expression analysis:</h3></div>
+        <div>
+          <p>{{ recognizedVideoExpression }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="screen-capture-container">
+    <div class="section-header">
+      <h3 style="margin-top: 0;">Screenshot</h3>
+      <button (click)="captureScreenshot()">Capture Screenshot</button>
+    </div>
 
-  <button (click)="startVoiceRecording()" [disabled]="isRecording">Start Recording</button>
-  <button (click)="stopVoiceRecording()" [disabled]="!isRecording">Stop Recording</button>
+    <canvas #canvasScreenshot></canvas>
 
-  <button (click)="captureScreenshot()">Capture Screenshot</button>
+    <h3 style="margin-top: 0;">Picture analysis:</h3>
+    <p>{{ pictureExpression }}</p>
+  </div>
+  <div class="conversation-container">
+    <div class="section-header">
+      <h3 style="margin-top: 0;">Conversation</h3>
+      <button (click)="startListening()" [disabled]="isListening">
+        Talk to me
+      </button>
+      <button (click)="stopListening()" [disabled]="!isListening">
+        Stop talking
+      </button>
+    </div>
+
+    <div class="output" style="border: 1px dashed gray">
+      <h3>You:</h3>
+      <p>{{ recognizedText }}</p>
+      <h3>AI:</h3>
+      <p>{{ aiAnswer }}</p>
+    </div>
+    <h3>Conversation History:</h3>
+    <ul>
+      <li *ngFor="let message of conversationHistory">
+        <strong>You: {{ message.inputSentence }}:</strong>. AI:{{
+          message.aiResponse
+        }}
+        <button (click)="deleteMessage(message)">Delete</button>
+      </li>
+    </ul>
+    <div>
+      <div>
+        <input
+          [(ngModel)]="textToSpeak"
+          placeholder="Type what I have to say..."
+        />
+        <button (click)="updateText()">Update Text</button>
+      </div>
+    </div>
+  </div>
 </div>
