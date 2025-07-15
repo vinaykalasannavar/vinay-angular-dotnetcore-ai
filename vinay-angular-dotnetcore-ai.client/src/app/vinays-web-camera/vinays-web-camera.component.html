@@ -57,16 +57,18 @@
         <strong>You: {{ message.inputSentence }}:</strong>. AI:{{
           message.aiResponse
         }}
-        <button (click)="deleteMessage(message)">Delete</button>
+        <button class="delete-btn" (click)="deleteMessage(message)" title="Delete">
+          &times;
+        </button>
       </li>
     </ul>
     <div>
       <div>
         <input
           [(ngModel)]="textToSpeak"
-          placeholder="Type what I have to say..."
+          placeholder="Type something for me to say..."
         />
-        <button (click)="updateText()">Update Text</button>
+        <button (click)="updateText()">Say it</button>
       </div>
     </div>
   </div>

@@ -13,10 +13,10 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  
+
 }
 .video-element {
-  border: 2px solid green;
+  border: 1px solid green;
   display: block;
 }
 
@@ -24,7 +24,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  border: 2px dashed #92cd87;
+  border: 1px dashed #92cd87;
   border-radius: 8px;
   pointer-events: none; /* optional: let clicks pass through to the video */
 }
@@ -59,8 +59,7 @@
 video,
 canvas {
   width: 100%;
-  width: 90%;
-  border: 2px solid #333;
+  border: 1px solid #333;
   border-radius: 8px;
 }
 
