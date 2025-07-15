@@ -73,12 +73,22 @@ namespace vinay_angular_dotnetcore_ai.Server.Controllers
             List<ChatMessage> chatMessages;
             if (_useHistoryFromUi)
             {
+                // Give the AI some context about the conversation
                 chatMessages =
                 [
                     new SystemChatMessage("You are a helpful assistant."),
                     new SystemChatMessage("You provide short answers."),
-                    new UserChatMessage(voiceInput.InputSentence)
                 ];
+
+                // Add the conversation history if available
+                foreach (var conversation in voiceInput.ConversationHistory)
+                {
+                    chatMessages.Add(new UserChatMessage(conversation.InputSentence));
+                    chatMessages.Add(new AssistantChatMessage(conversation.AIResponse));
+                }
+
+                // Add the latest user input question
+                chatMessages.Add(new UserChatMessage(voiceInput.InputSentence));
             }
             else
             {
@@ -92,12 +102,6 @@ namespace vinay_angular_dotnetcore_ai.Server.Controllers
                 chatMessages = UserHistories[userId];
             }
 
-
-            foreach (var conversation in voiceInput.ConversationHistory)
-            {
-                chatMessages.Add(new UserChatMessage(conversation.InputSentence));
-                chatMessages.Add(new AssistantChatMessage(conversation.AIResponse));
-            }
             var response = chatClient.CompleteChat(chatMessages, requestOptions);
             var responseAnswer = response.Value.Content[0].Text;
 
